@@ -328,3 +328,13 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Mac OS chaff
+.DS_Store
+
+# Generated Database
+*.db
