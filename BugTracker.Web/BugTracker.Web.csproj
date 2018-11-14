@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>BugTracker.Web-8C89332F-BF9E-405F-8E6D-54F2F553B616</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" PrivateAssets="All" />
+
+    <PackageReference Include="ClacksMiddlware" version="2.0.*" />
+    <PackageReference Include="OwaspHeaders.Core" version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BugTracker.Data\BugTracker.Data.csproj" />
+    <ProjectReference Include="..\BugTracker.Repo\BugTracker.Repo.csproj" />
+    <ProjectReference Include="..\BugTracker.Service\BugTracker.Service.csproj" />
+  </ItemGroup>
+
+</Project>
