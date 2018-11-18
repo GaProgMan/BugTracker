@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/BugTracker.Api/BugTracker.Api.csproj"
+                "${workspaceFolder}/bugTracker.Core.Api/bugTracker.Core.Api.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

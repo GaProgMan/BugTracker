@@ -17,16 +17,18 @@ namespace bugTracker.Core.Persistence
             // So let's keep tabs on the counts as they come back
 
             var dbSeeder = new DatabaseSeeder(context);
-            if (!context.Bugs.Any())
-            {
-                var pathToSeedData = Path.Combine(Directory.GetCurrentDirectory(), "SeedData", "BugSeedData.json");
-                bugCount = dbSeeder.SeedBugEntitiesFromJson(pathToSeedData).Result;
-            }
-
             if (!context.Users.Any())
             {
                 var pathToSeedData = Path.Combine(Directory.GetCurrentDirectory(), "SeedData", "UserSeedData.json");
                 userCount = dbSeeder.SeedUserEntitiesFromJson(pathToSeedData).Result;
+            }
+
+            // Because the Bug seed data _could_ contain Assigned Users, we need to ensure that the bugs
+            // are seeded _after_ the users
+            if (!context.Bugs.Any())
+            {
+                var pathToSeedData = Path.Combine(Directory.GetCurrentDirectory(), "SeedData", "BugSeedData.json");
+                bugCount = dbSeeder.SeedBugEntitiesFromJson(pathToSeedData).Result;
             }
 
             return bugCount + userCount;
