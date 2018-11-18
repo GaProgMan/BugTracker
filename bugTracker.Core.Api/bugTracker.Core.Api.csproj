@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Authors>Jamie Taylor</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>bugTracker.Core.Api</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>bugTracker.Core</PackageId>
+    <UserSecretsId>8dd69dfc-8bd6-46b4-9bec-186b9044a48d</UserSecretsId>
+  </PropertyGroup>
+  <!-- Add XML documentation for Swagger (debug) -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\bugTracker.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <!-- Add XML documentation for Swagger (release) -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\bugTracker.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Update="wwwroot;Views;appsettings.json;web.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="ClacksMiddlware" Version="2.0.2" />
+    <PackageReference Include="OwaspHeaders.Core" Version="3.3.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Required to ensure that we have the appsettings file copied to the publish directory -->
+    <None Include="appsettings.Production.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+    <None Include="bugTracker.db" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bugTracker.Core.DAL\bugTracker.Core.DAL.csproj" />
+    <ProjectReference Include="..\bugTracker.Core.DTO\bugTracker.Core.DTO.csproj" />
+    <ProjectReference Include="..\bugTracker.Core.Entities\bugTracker.Core.Entities.csproj" />
+    <ProjectReference Include="..\bugTracker.Core.Persistence\bugTracker.Core.Persistence.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bugTracker.Core.Entities\bugTracker.Core.Entities.csproj"/>
+    <ProjectReference Include="..\bugTracker.Core.Persistence\bugTracker.Core.Persistence.csproj" />
+  </ItemGroup>
+</Project>

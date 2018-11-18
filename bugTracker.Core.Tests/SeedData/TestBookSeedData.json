@@ -1,0 +1,12 @@
+[
+    {
+        "Title": "Bug Tracker does not start",
+        "Description": "What is the URL to start the Bug Tracker? I can't find it anywhere",
+        "Status" : 100
+    },
+    {
+        "Title": "Bug Tracker doesn't have any bugs",
+        "Description": "Is this really a bug? Who can say",
+        "Status": 200
+    }
+]
