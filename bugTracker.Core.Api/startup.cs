@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-
 namespace bugTracker.Core
 {
     public class Startup
@@ -51,7 +50,7 @@ namespace bugTracker.Core
 
             // Only block and upgrade all insecure requests when not in dev
             // temporarily commented out, in order to get the docker container runnning
-            //app.UseSecureHeaders(env.IsProdOrStaging());
+            app.UseSecureHeaders(env.IsProdOrStaging());
             app.UseResponseCaching();
             app.UseResponseCompression();
             app.GnuTerryPratchett();

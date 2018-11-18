@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using bugTracker.Core.DTO.ApiResponseModels;
 using bugTracker.Core.DTO.ViewModels;
 using bugTracker.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
@@ -14,23 +15,24 @@ namespace bugTracker.Core.Controllers
         
         protected JsonResult ErrorResponse(string message = "Not Found")
         {
-            return Json (new {
+            return Json(new BaseApiResponseModel{
                 Success = false,
-                Result = message
+                Message = message
             });
         }
 
         protected JsonResult MessageResult(string message, bool success = true)
         {
-            return Json(new {
+            return Json(new BaseApiResponseModel{
                 Success = success,
-                Result = message
+                Message = message
             });
         }
 
         protected JsonResult SingleResult(BaseViewModel singleResult)
         {
-            return Json(new {
+            return Json (new BaseApiMessageSingleResponseViewModel
+            {
                 Success = true,
                 Result = singleResult
             });
@@ -38,9 +40,9 @@ namespace bugTracker.Core.Controllers
 
         protected JsonResult MultipleResults(IEnumerable<BaseViewModel> multipleResults)
         {
-            return Json (new {
+            return Json (new BaseApiMessageMultipleResponseModel{
                 Success = true,
-                Result = multipleResults
+                Results = multipleResults
             });
         }
     }

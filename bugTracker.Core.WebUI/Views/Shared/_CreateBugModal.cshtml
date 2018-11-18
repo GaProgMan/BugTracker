@@ -1,0 +1,40 @@
+<div class="modal fade" id="createBugModal" tabindex="-1" role="dialog" aria-labelledby="createBugModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Create Bug</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="detailsForm">
+              <div class="form-row">
+                  <div class="col">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" placeholder="title">
+                  </div>
+                  <div class="col">
+                      <label for="status">Status</label>
+                      <select class="form-control" id="status">
+                          <option value="100">Open</option>
+                          <option value="300">Closed</option>
+                          <option value="400">Not going to fix</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="col">
+                      <label for="description">Description:</label>
+                      <textarea class="form-control" id="description"></textarea>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="createBug">Create Bug</button>
+      </div>
+    </div>
+  </div>
+</div>

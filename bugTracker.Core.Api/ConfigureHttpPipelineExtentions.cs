@@ -116,6 +116,17 @@ namespace bugTracker.Core
                 {
                     CommandType = CspCommandType.Directive,
                     DirectiveOrUri = "sha256-3kf2chgLlsbYoTHVrm7JlIF6/529E3h6TGATiBxN4kU="
+                },
+                new ContenSecurityPolicyElement
+                {
+                    CommandType = CspCommandType.Directive,
+                    DirectiveOrUri = "sha256-j4Lx1FqFgvYDBEjW7NQaEY7/HhCi8WVsLWkqC4+wJ3w="
+                },
+
+                new ContenSecurityPolicyElement
+                {
+                    CommandType = CspCommandType.Directive,
+                    DirectiveOrUri = "sha256-imr81cRqVZ10hwXR/UYsT/lF6pwgRUdP9jjyUiuDxQU="
                 }
             };
             
