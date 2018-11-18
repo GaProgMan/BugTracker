@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using dwCheckApt.Tests.Helpers;
+using bugTracker.Core.Tests.Helpers;
 using Moq;
 using Xunit;
 using System.IO;

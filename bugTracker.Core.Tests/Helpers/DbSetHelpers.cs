@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 
-namespace dwCheckApt.Tests.Helpers
+namespace bugTracker.Core.Tests.Helpers
 {
     public static class DbSetHelpers
     {
