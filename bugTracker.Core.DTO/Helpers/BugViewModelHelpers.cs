@@ -16,7 +16,8 @@ namespace bugTracker.Core.DTO.Helpers
                 Id = dbModel.Id,
                 Description = dbModel.Description,
                 Title = dbModel.Title,
-                Status = ConvertDbStatusToViewModelStatus(dbModel.Status)
+                Status = ConvertDbStatusToViewModelStatus(dbModel.Status),
+                Created = dbModel.Created
             };
 
             if (dbModel.AssignedUser != null)

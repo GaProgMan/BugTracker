@@ -1,0 +1,47 @@
+﻿@using System.Collections.Generic;
+@using bugTracker.Core.DTO.ViewModels;
+@model List<BugViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h3>Welcome to bugTracker.Core.WebUI</h3>
+        <p>Please find the current list of logged bugs in the table below</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Bug Title</th>
+                    <th>Assigned User</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var bug in Model)
+                {
+                    <tr>
+                        <td><a asp-controller="Bug" asp-action="Details" asp-route-id="@bug.Id">@bug.Title</a></td>
+                        <td>@bug.AssignedUser?.Username</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Adding Bugs</h4>
+        <p>To add a bug, please click the following button and fill in the modal</p>
+    </div>
+    <div class="col-md-3 col-md-offset-9">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createBugModal">
+            Launch demo modal
+        </button>
+    </div>
+</div>
+
+<partial name="_CreateBugModal" />

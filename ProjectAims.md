@@ -2,8 +2,8 @@
 
 The following list gives a vague plan for this project
 
-- [x] Users can register and login
-- [ ] When logged in, users can see a list of bugs in a table
+~~- [x] Users can register and login~~
+- [ ] ~~When logged in,~~ users can see a list of bugs in a table
   - Columns: Title of bug, Date created
   - Columns are _not_ sortable
 - [ ] User can click on a bug title and will be taken to a page with bug details

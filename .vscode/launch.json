@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bugTracker.Core.Api/bin/Debug/netcoreapp2.1/bugTracker.Core.Api.dll",
+            "program": "${workspaceFolder}/bugTracker.Core.WebUI/bin/Debug/netcoreapp2.1/bugTracker.Core.WebUI.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/bugTracker.Core.Api",
+            "cwd": "${workspaceFolder}/bugTracker.Core.WebUI",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

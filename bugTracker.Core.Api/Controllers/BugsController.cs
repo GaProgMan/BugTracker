@@ -37,7 +37,7 @@ namespace bugTracker.Core.Controllers
                 return ErrorResponse("Not found");
             }
 
-            return SingleResult(BugViewModelHelpers.ConvertToViewModel(bug));
+            return Json(BugViewModelHelpers.ConvertToViewModel(bug));
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace bugTracker.Core.Controllers
                 return ErrorResponse();
             }
 
-            return MultipleResults(BugViewModelHelpers.ConvertToViewModels(bugs));
+            return Json(BugViewModelHelpers.ConvertToViewModels(bugs));
         }
 
         /// <summary>
