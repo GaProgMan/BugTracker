@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1-alpine AS build
 # Set the working directory witin the container
 WORKDIR /build
 
@@ -43,7 +43,7 @@ RUN dotnet publish ./bugTracker.Core.Api/bugTracker.Core.Api.csproj --configurat
 RUN cp ./bugTracker.Core.Persistence/bugTracker.db ./dist/bugTracker.db
 
 # Build runtime image
-FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine AS app
+FROM mcr.microsoft.com/dotnet/aspnet:2.1-alpine AS app
 WORKDIR /app
 COPY --from=build /build/dist .
 ENV ASPNETCORE_URLS http://+:80

@@ -66,10 +66,10 @@ This will need to be perfored before running the application for the first time
 ## Building and Running - docker
 
 1. Ensure that you are in the root directory of the project
-1. Run the following command `docker build . -t bug.tracker.api`
+1. Run the following command `docker build . -t bug.tracker.api -f API.Dockerfile`
 1. Once the build process has completed, run the following command: `docker run -d -p 8000:80 bug.tracker.api`
 
-The project should be running on port 8000 of yourt local machine. Heading to `localhost:8000/swagger` should load the swagger API documentation
+The project should be running on port 8000 of your local machine. Heading to `localhost:8000/swagger` should load the swagger API documentation
 
 ## Seeding the Database
 
